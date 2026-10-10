@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Garamond, serif;
+    color: #f0c8ff;
+}
+
+header {
+    height: 12vh;
+    width: 100vw;
+    background-color: #582a5e;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: grid;
+    border-bottom: 2px solid #f0c8ff;
+    grid-template-columns: repeat(3, 1fr);
+}
+.headerItem{
+    color: inherit;       
+    text-decoration: none;     
+    cursor: inherit; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.lineElement{
+    border-right: 2px solid #f0c8ff;
+}
+.headerItem h1:hover{
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+body {
+    background-color: pink;
+    overflow-x: hidden;
+    width: 300%; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#page1{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./assets/hearts.png');
+    background-size: cover;
+    background-position: center;
+}
+#page1 h2{
+    font-size: 3vw;
+}
+#page3 h2{
+    font-size: 3vw;
+}
+#page2{
+    margin-top: 12vh;
+    height: 88vh;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-image: url('./assets/heartborder.png');
+    background-size: 100% 100%;
+}
+#p2-item1{
+    background-image: url('./assets/kissticket.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#p2-item2{
+    background-image: url('./assets/tuborg.png');
+    background-size: contain;
+    background-repeat: space;
+    background-position: center;
+}
+#p2-item3{
+    background-image: url('./assets/ring.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.page2-item{
+    margin-bottom: 12vh;
+    border-radius: 2rem;
+    width: 25vw;
+    height: 25vw;
+    border: 2px solid rgb(250, 184, 255);
+}
+#page3{
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 
+    14.9vw 0px 0px 0px #582a5e inset,
+    -14.9vw 0px 0px 0px #582a5e inset,
+    15vw 0px 0px 0px #f0c8ff inset, 
+    -15vw 0px 0px 0px #f0c8ff inset;
+}
+.page {
+    background-color: #582a5e;
+    padding-top: 12vh;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.toggle-checkbox {
+    display: none;
+    
+}
+.toggle-checkbox:checked ~ .toggle-button {
+    opacity: 0;
+    transition: all 1s ease;
+   
+}
+.toggle-button {
+    border-radius: 2rem;
+    opacity: 1;
+    transition: all 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.status-message {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    gap: 10px;
+    
+}
+.checkbox-group label{
+    border-bottom: 2px solid #f0c8ff;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 27%;
+    text-align: left;
+}
+.checkbox-group:not(:has(input[type="checkbox"]:not(:checked))) .status-message {
+    display: block;
+    font-size: 1.5rem;
+}
